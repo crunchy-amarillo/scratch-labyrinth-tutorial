@@ -1,17 +1,118 @@
 <!DOCTYPE html>
-<html>
+<html lang="de">
 
 <head>
     <title>Scratch - Labyrinth Tutorial</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+    <link rel="stylesheet" href="custom.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
         crossorigin="anonymous"></script>
+    <script type="text/javascript" src="include.js"></script>
 </head>
 
 <body>
-    <h1></h1>
+    <div data-include="header.html"></div>
+    <div class="d-flex flex-row justify-content-start">
+        <div data-include="menu.html"></div>
+        <div class="px-3 py-2">
+            <h1>Herzlich Willkommen zum Tutorial "Ein Labyrinth-Spiel mit Scratch programmieren"!</h1>
+            <p>
+                In der folgenden Anleitung erkläre ich dir Schritt für Schritt, wie du ein eigenes Labyrinth-Spiel
+                mit Scratch
+                programmieren kannst.
+                Keine Angst - wir fangen ganz einfach an und wenn du der Anleitung genau folgst, kann nichts schief
+                gehen. Wenn
+                du schon etwas Erfahrung in der
+                Programmierung mit Scratch hast, dann kannst du Punkte die du kennst auch direkt überspringen. Ganz
+                am Ende
+                stelle ich dir noch ein paar
+                herausfordernde Aufgaben für dein Labyrinth-Spiel.
+            </p>
+            <p>
+                Hier kannst du dir das Labyrinth ansehen, welches wir in diesem Tutorial gestalten möchten: <a
+                    href="https://scratch.mit.edu/projects/551991351/">https://scratch.mit.edu/projects/551991351/</a>.
+                Bei der Gestaltung deines Labyrinth bist du aber ganz frei und kannst deiner Vorstellungskraft
+                freien Lauf
+                lassen. Du kannst eigene Figuren wählen und auch die Wände
+                deines Labyrinths ganz nach deiner eigenen Vorstellung erschaffen.
+            </p>
+            <p>
+                Wenn du etwas Inspiration benötigst, dann kannst du dir gern auch noch die Beispiele in der folgenden
+                Bild-Übersicht anschauen.
+                Klicke einfach auf die Schaltfläche <span class="btn btn-sm btn-success">Ansehen</span> um das
+                Scratch-Programm zu öffnen.
+            </p>
+
+            <div class="w-75 mt-5 mx-auto border">
+                <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active"
+                            aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1"
+                            aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2"
+                            aria-label="Slide 3"></button>
+                        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="3"
+                            aria-label="Slide 4"></button>
+                        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="4"
+                            aria-label="Slide 5"></button>
+                    </div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active pb-10">
+                            <img class="d-block w-100" src="img/start/slider-1.jpg" alt="First slide">
+                            <div class="carousel-caption d-none d-md-block">
+                                <a href="https://scratch.mit.edu/projects/551991351/" class="btn btn-lg btn-success"
+                                    target="_blank">Ansehen</a>
+                            </div>
+                        </div>
+                        <div class="carousel-item pb-10">
+                            <img class="d-block w-100" src="img/start/slider-2.jpg" alt="Second slide">
+                            <div class="carousel-caption d-none d-md-block">
+                                <a href="https://scratch.mit.edu/projects/530004623/" class="btn btn-lg btn-success"
+                                    target="_blank">Ansehen</a>
+                            </div>
+                        </div>
+                        <div class="carousel-item pb-10">
+                            <img class="d-block w-100" src="img/start/slider-3.jpg" alt="Third slide">
+                            <div class="carousel-caption d-none d-md-block">
+                                <a href="https://scratch.mit.edu/projects/530047633/" class="btn btn-lg btn-success"
+                                    target="_blank">Ansehen</a>
+                            </div>
+                        </div>
+                        <div class="carousel-item pb-10">
+                            <img class="d-block w-100" src="img/start/slider-4.jpg" alt="Fourth slide">
+                            <div class="carousel-caption d-none d-md-block">
+                                <a href="https://scratch.mit.edu/projects/456843588/" class="btn btn-lg btn-success"
+                                    target="_blank">Ansehen</a>
+                            </div>
+                        </div>
+                        <div class="carousel-item pb-10">
+                            <img class="d-block w-100" src="img/start/slider-5.jpg" class="btn btn-lg btn-success"
+                                alt="Fifth slide">
+                            <div class="carousel-caption d-none d-md-block">
+                                <a href="https://scratch.mit.edu/projects/453913401/" target="_blank">Ansehen</a>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>
