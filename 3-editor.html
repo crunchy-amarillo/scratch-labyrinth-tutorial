@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Scratch - Labyrinth Tutorial - Scratch starten und einrichten</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+    <link rel="stylesheet" href="custom.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script type="text/javascript" src="include.js"></script>
+</head>
+
+<body>
+    <div data-include="header.html"></div>
+    <div class="d-flex flex-row justify-content-start">
+        <div data-include="menu.html"></div>
+        <div class="flex-column w-100">
+            <div class="px-3 py-2">
+                <h1>Der Editor</h1>
+                <div class="mt-4">
+                    <p>
+                        Jetzt bist du fast soweit und kannst mit dem Programmieren deines Spiels beginnen. Zuvor möchte ich dir aber noch kurz den Editor 
+                        und seine Funktionen vorstellen.<br/>
+                        Der Editor ist in verschiedene Bereiche unterteilt, die du dir im folgenden Bild genauer ansehen kannst. Unterhalb des Bildes 
+                        erkläre ich dir dann, welcher Bereich welche Funktion hat.
+
+                        <img src="img/editor/editor.jpg" alt="Editor" class="d-block mt-3 img-fluid img-thumbnail" />
+                    </p>
+
+                    <table class="table table-bordered">
+                        <thead class="bg-light">
+                            <tr>
+                                <th>Bereich Nr.</th>
+                                <th>Name</th>
+                                <th>Erklärung</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1.</td>
+                                <td>Menüleiste</td>
+                                <td>
+                                    In der Menüleiste stehen dir verschiedene Funktionen zur Verfügung. Die wichtigsten sind:
+                                    <ul>
+                                        <li>Datei: Auf deinem Computer speichern</li>
+                                        <li>Datei: Von deinem Computer hochladen</li>
+                                    </ul>
+
+                                    Falls du später Lust hast noch mehr mit Scratch zu arbeiten, kannst du dich auch auf der 
+                                    Scratch-Seite anmelden. Das geht über die <b>Anmelden</b>-Funktion rechts in der Menüleiste. 
+                                    Wenn du dich anmelden möchtest - bitte mach dies gemeinsam mit deinen Eltern. 
+                                    <b>Um heute das Spiel zu entwicklen, ist es nicht nötig, dass du dich anmeldest!</b>
+                                    <br/>
+                                    Wenn du dich später anmeldest, dann stehen dir noch weitere Funktionen über die Menüleiste zur Verfügung.
+                                    Du kannst dann bspw. einen Namen für dein Programmvergeben.                                    
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>2.</td>
+                                <td>Programm-Code-Fenster</td>
+                                <td>Dies ist der Hauptbereich. In diesem stellst du deinen Programmcode zusammen und programmierst deine
+                                    Figuren.</td>
+                            </tr>
+                            <tr>
+                                <td>3.</td>
+                                <td>Vorschaufenster</td>
+                                <td>
+                                    Hier kannst du dein Programm ausführen und sehen, was mit den von dir programmierten Figuren passiert. 
+                                    Dabei stehen dir folgende Funktionen zur Verfügung:
+                                    <ul class="mt-3">
+                                        <li><img src="img/editor/start.jpg" class="browser-logo mb-2" alt="Start"/> Programm starten</li>
+                                        <li><img src="img/editor/stop.jpg" class="browser-logo mb-2" alt="Ende"/> Programm beenden</li>
+                                        <li><img src="img/editor/fullscreen.jpg" class="browser-logo mb-2" alt="Vollbild"/> Ansicht auf Vollbild stellen</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>4.</td>
+                                <td>Blockübersicht</td>
+                                <td>
+                                    Hier siehst du die Blockübersicht. Diese enthält die verschiedenen Gruppen mit Programmierblöcken. 
+                                    Folgende Gruppen gibt es:
+                                    <ul>
+                                        <li>
+                                            <span class="block-circle rounded-circle d-inline-block" style="background-color:#4C97FF;"></span>
+                                            <b>Bewegung: </b> Programmierblöcken um deine Figuren in verschiedene Richtungen zu bewegen.
+                                        </li>
+                                        <li>
+                                            <span class="block-circle rounded-circle d-inline-block" style="background-color:#9966FF;"></span>
+                                            <b>Aussehen: </b> Programmierblöcken um das Aussehen deiner Figuren zu verändern und deine Figuren Texte sprechen zu lassen
+                                        </li>
+                                        <li>
+                                            <span class="block-circle rounded-circle d-inline-block" style="background-color:#D65CD6;"></span>
+                                            <b>Klang: </b> Programmierblöcken um Töne abzuspielen
+                                        </li>
+                                        <li>
+                                            <span class="block-circle rounded-circle d-inline-block" style="background-color:#FFD500;"></span>
+                                            <b>Ereignisse: </b> Programmierblöcken um deine Figuren auf bestimmte Dinge reagieren zu lassen, beispielsweise den Start des 
+                                            Programmes oder das Drücken einer Taste
+                                        </li>
+                                        <li>
+                                            <span class="block-circle rounded-circle d-inline-block" style="background-color:#FFAB19;"></span>
+                                            <b>Steuerung: </b> Programmierblöcken um auf unterschiedliche Ereignisse zu reagieren und dein Programm so gestalten zu können
+                                        </li>
+                                        <li>
+                                            <span class="block-circle rounded-circle d-inline-block" style="background-color:#4CBFE6;"></span>
+                                            <b>Fühlen: </b> Programmierblöcke mit denen du automatisch bestimmte Dinge im Programm erkennen kannst, zum Beispiel, ob deine 
+                                            Figur eine andere Figur berührt.
+                                        </li>
+                                        <li>
+                                            <span class="block-circle rounded-circle d-inline-block" style="background-color:#40BF4A;"></span>
+                                            <b>Operatoren: </b> Programmierblöcke die dir das Berechnen und Vergleichen von Dingen ermöglichen.
+                                        </li>
+                                        <li>
+                                            <span class="block-circle rounded-circle d-inline-block" style="background-color:#FF8C1A;"></span>
+                                            <b>Variablen: </b> ermöglichen dir das Speichern bestimmter Dinge wie zum Beispiel den Punktestand in einem Spiel
+                                        </li>
+                                        <li>
+                                            <span class="block-circle rounded-circle d-inline-block" style="background-color:#FF6680;"></span>
+                                            <b>Eigene Blöcke: </b> können benutzt werden um mehrere der anderen Blöcke zu einem eigenen Block zusammenzufassen und 
+                                            dann wieder zu verwenden.
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>5.</td>
+                                <td>Programmierblöcke</td>
+                                <td>Hier werden dir alle verfügbaren Programmierblöcke angezeigt. Wenn du in der Blockübersicht (4.) eine Gruppe auswählst,
+                                    dann erscheinen hier die passenden Blöcke. Auf die einzelnen Blöcke selbst werden wir später eingehen, wenn wir das Labyrinth
+                                    programmieren.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>6.</td>
+                                <td>Übersichts-Tabs</td>
+                                <td>
+                                    Hier hast du die Möglichkeit zwischen drei verschiedenen Reitern umzuschalten. Der erste Reiter ist am wichtigsten, er öffnet
+                                    im Hauptbereich (2.) die Programmieransicht. <br/>
+                                    Der zweiter Reiter wird genutzt, wenn du das Aussehen einer Figur bearbeiten möchtest oder eigene Figuren malst. ("Kostüme") <br/>
+                                    Der dritte Reiter wird zum Bearbeiten von Klängen benötigt. <br/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>7.</td>
+                                <td>Bühnenbild</td>
+                                <td>Hier hast du die Möglichkeit ein Bühnenbild auszuwählen. Das Bühnenbild ist der Hintergrund, welcher in deinem Programm
+                                    dargestellt wird.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>8.</td>
+                                <td>Figuren</td>
+                                <td>
+                                    An dieser Stelle werden die Figuren ausgewählt und in dein Programm eingefügt. Es besteht auch die Möglichkeit eigene Figuren zu 
+                                    zeichnen. Außerdem kannst du verschiedene Einstellungen für deine Figur festlegen. Dazu zählt unter anderen die Größe und die 
+                                    Position an der deine Figur sich befindet. <br/>
+                                    Die Position deiner Figur kannst du auch verändern, in dem die die Figur im Vorschaufenster (3.) anklickst, die linke Maustaste 
+                                    gedrück hälst und sie an die gewünschte Stelle ziehst. 
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="border-top my-5 py-3">
+                    <a href="2-speichern.html" class="btn btn-lg btn-secondary float-start">Vorherige Seite</a>
+                    <a href="4-labyrinth-malen.html" class="btn btn-lg btn-secondary float-end">Nächste Seite</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

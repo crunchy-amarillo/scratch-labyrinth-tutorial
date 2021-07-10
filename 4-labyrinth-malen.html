@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Scratch - Labyrinth Tutorial - Labyrinth malen</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+    <link rel="stylesheet" href="custom.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script type="text/javascript" src="include.js"></script>
+</head>
+
+<body>
+    <div data-include="header.html"></div>
+    <div class="d-flex flex-row justify-content-start">
+        <div data-include="menu.html"></div>
+        <div class="flex-column w-100">
+            <div class="px-3 py-2">
+                <h1>Das Labyrinth malen</h1>
+                <div class="mt-4">
+                    <p class="lead">
+                        Jetzt kann es endlich losgehen: wir programmieren ein Labyrinth-Spiel. Dafür müssen wir als erstes das Labyrinth zeichnen. 
+                        Dabei gehst du wie folgt vor:
+                    </p>
+                    <p>
+                        1. Im Figuren-Bereich (8.) klickst du den kleinen Katzenkopf an. Es öffnet sich ein Menü. Du wählst nun den Pinsel um eine 
+                        neue Figur zu malen.
+                        <img src="img/labyrinth/malen-1.png" alt="Malen 1" class="d-block mt-3 img-fluid img-thumbnail" />
+                    </p>
+                    <p>
+                        2. Du bist num im zweiten Übersichts-Tab (6.) gelandet. In der Mitte des Bildes wird dir nun eine leere Fläche angezeigt.
+                        Das ist deine Malfläche auf dieser zeichnen wir nun ein Labyrinth. Dafür malen wir zunächst ein Rechteck auf der Fläche 
+                        ein. Wähle links von der Malfläche im Werkzeugbereich das Rechteck-Werkzeug (Im Bild das letzte Werkzeug, welches mit hellblau hervorgehoben ist.)
+
+                        <img src="img/labyrinth/malen-2.png" alt="Malen 2" class="d-block mt-3 img-fluid img-thumbnail" />
+                    </p>
+                    <p>
+                        3. Nun müssen wir die Füllfarbe des Rechtsecks ausschalten, damit nur der Rand gemalt wird. Dazu klickst du oberhalb der Malfläche
+                        die Schaltfläche "Füllfarbe" an und wählst dann im Menü, welches erscheint, das weiße Rechteck mit dem roten Schrägsstrich aus. 
+                        <b>Dieser Schritt ist sehr wichtig: ansonsten kann sich deine Figur später im Labyrinth nicht bewegen.</b>
+
+                        <img src="img/labyrinth/malen-3.png" alt="Malen 3" class="d-block mt-3 img-fluid img-thumbnail" />
+                    </p>
+                    <p>
+                        4. Als nächstes kannst du über die Schalfläche Randfarbe eine beliebige Farbe für den Rand deines Labyrinths auswählen. Spiele 
+                        dabei mit den Einstellungen für Farbe, Sättigung und Helligkeit rum bis du eine Farbe gefunden hast, die dir gefällt. 
+
+                        <img src="img/labyrinth/malen-4.png" alt="Malen 4" class="d-block mt-3 img-fluid img-thumbnail" />
+                    </p>
+                    <p>
+                        5. Als letztes kannst du noch festlegen, wie dick dein Rand sein soll. Den Wert dafür stellst du im Feld rechts neben der Randfarbe
+                        ein. Je größer die Zahl die du angibst, umso breiter wird der Rand. Ein guter Wert ist zum Beispiel 10.
+
+                        <img src="img/labyrinth/malen-5.png" alt="Malen 5" class="d-block mt-3 img-fluid img-thumbnail" />
+                    </p>
+                    <p>
+                        6. Nun sind alle Einstellungen getroffen und du kannst den Rand malen. Klicke dafür in die obere linke Ecke der Malfläche. Halte die
+                        linke Maustaste gedrücke und nun ziehe mit den Mauszeiger hinter bis zur unteren rechten Ecke der Malfläche. Jetzt lasse die linke 
+                        Maustaste wieder los: Dein Rahmen wurde gemalt. Wenn es nicht so geklappt hat, wie du dir das vorgestellt hast, kannst du über den 
+                        "Rückwärts"-Knopf <img src="img/labyrinth/rueckwaerts.jpg" class="browser-logo" alt="Zurück" /> den letzten Schritt wieder rückgängig machen und es nochmal versuchen.
+
+                        <img src="img/labyrinth/malen-6.png" alt="Malen 6" class="d-block mt-3 img-fluid img-thumbnail" />
+                    </p>
+                    <p>
+                        7. Jetzt fehlen deinem Labyrinth nur noch ein paar Gänge. Dafür nutzt du das Linien-Werkzeug, welches links neben der Malfläche direkt oberhalb des 
+                        Rechteck-Werkzeugs zur Verfügung steht. Du hast auch bei diesem Werkzeug die Möglichkeit die Farbe und die Breite der Linie zu verändern. 
+                        Teste hier aus, was dir gefällt.
+
+                        <img src="img/labyrinth/malen-7.png" alt="Malen 7" class="d-block mt-3 img-fluid img-thumbnail" />
+                    </p>
+                    <p>
+                        8. Nun male ein paar Gänge in dein Labyrinth. Achte aber darauf, dass diese nicht zu eng werden, damit deine Spielfigur später noch durch diese 
+                        laufen kann.
+
+                        <img src="img/labyrinth/malen-8.png" alt="Malen 8" class="d-block mt-3 img-fluid img-thumbnail" />
+                    </p>
+                </div>
+                <div class="border-top my-5 py-3">
+                    <a href="3-editor.html" class="btn btn-lg btn-secondary float-start">Vorherige Seite</a>
+                    <a href="5-labyrinth-fertig.html" class="btn btn-lg btn-secondary float-end">Nächste Seite</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
