@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Scratch - Labyrinth Tutorial - Scratch starten und einrichten</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+    <link rel="stylesheet" href="css/custom.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script type="text/javascript" src="js/include.js"></script>
+</head>
+
+<body>
+    <div data-include="header.html"></div>
+    <div class="d-flex flex-row justify-content-start">
+        <div data-include="menu.html"></div>
+        <div class="flex-column w-100">
+            <div class="px-3 py-2">
+                <h1>Die Figur und die Wand</h1>
+                <p>
+                    Du hast nun deinen Programmcode getestet und kannst deine Figur schon mit den Pfeiltasten bewegen.
+                    Dabei ist dir sicherlich aufgefallen, dass deine Figur auch über die Wand des Labyrinths hinaus
+                    laufen kann. Das wollen wir natürlich nicht und deshalb ergänzen wir jetzt etwas Programmcode um
+                    genau dies zu verhindern.
+                    <br />
+                    Das <b>Ziel</b> soll dabei sein, dass die Figur immer, wenn sie das Labyrinth berührt, zurück zum
+                    Startpunkt "gebeamt" wird. Außerdem lassen wir die Figur dabei ein lustiges Geräuch machen.
+                </p>
+                <h4 class="mt-4 border-top pt-3"><span class="badge bg-success">1.</span> Blöcke vorbereiten</h4>
+                <p>
+                    Um genau das beschriebene Ziel zu ereichen, gehst du wie folgt vor:
+                </p>
+                <p>
+                    Suche dir in der Gruppe "Ereignisse" den Startblock heraus und ziehe ihn in das
+                    Programm-Code-Fenster. Der Startblock trägt den Namen
+                    <code>Wenn (grüne Fahne) angeklickt wird</code>. Als zweites benötigst du den Block
+                    <code>wiederhole fortlaufend</code>. Diesen befestigst du im Programm-Code-Fenster direkt unterhalb
+                    des Startblocks. Du findest den Block in der Gruppe "Steuerung". Ebenfalls in dieser Gruppe befindet
+                    sich der Block <code>falls &lt; &gt; dann</code>. Wähle diesen Block als drittes, ziehe in in das
+                    Programm-Code-Fenster und platziere den Block innerhalb des
+                    <code>wiederhole fortlaufend</code>-Blocks.
+                    Bist du fertig, sollte dein Programmcode so aussehen, wie auf dem folgenden Bild dargestellt.
+
+                    <img src="img/figur/figur-fehler-1.png" alt="Fehler machen 1"
+                        class="d-block mt-3 img-fluid img-thumbnail" />
+                </p>
+                <h4 class="mt-4 border-top pt-3"><span class="badge bg-success">2.</span> Bedingung ergänzen</h4>
+                <p>
+                    Was macht dieser Programmcode nun? Er wird immer genau dann ausgeführt, wenn das Programm gestartet
+                    wird. Dadadurch, dass wir den Block <code>wiederhole fortlaufend</code> wird alles, was sich
+                    innerhalb dieses Blocks befindet dauerhaft ausgeführt. Das heißt alles was da drinsteht, wird immer
+                    wieder vom Programm überprüft und ausgeführt. Der <code>falls &lt; &gt; dann</code> ist ein
+                    Bedingungsblock. Er wartet darauf, dass irgendwas passiert um dann den Code auszuführen, der
+                    innerhalb des Blocks platziert wird. Kannst du dir vorstellen, auf welche Bedingung der Block warten
+                    muss?
+                    In unserem Fall wartet er darauf, dass deine Figur einen Fehler macht und die Wand des Labyrinths
+                    berührt. Das müssen wir dem Programm jetzt aber noch mitteilen. Dafür benötigen wir den
+                    <code>wird (Mauszeiger) berührt</code> Block aus der Gruppe "Fühlen". Er befindet sich gleich ganz
+                    oben. Diesen musst du jetzt im Bedingungsfeld des <code>falls &lt; &gt; dann</code> platzieren. Wenn
+                    du fertig bist, dann sieht das Ganze in etwa so aus:
+
+                    <img src="img/figur/fuehlen-1.jpg" alt="Bedingung einfügen"
+                        class="d-block mt-3 img-fluid img-thumbnail" />
+                </p>
+                <p>
+                    Wichtig ist nun noch, dass du die Voreinstellung von "Maustaste" auf den Namen deiner
+                    Labyrinth-Figur änderst.
+                    In meinem Fall ist das die Bezeichnung "Labyrinth". Bei dir kann der Name abweichen, falls du deinem
+                    Labyrinth eine andere Bezeichnung gegeben hast.
+
+                    <img src="img/figur/fuehlen-2.jpg" alt="Bedingung anpassen"
+                        class="d-block mt-3 img-fluid img-thumbnail" />
+                </p>
+                <h4 class="mt-4 border-top pt-3"><span class="badge bg-success">3.</span> Strafe für Figur einfügen</h4>
+                <p>
+                    Nun ist dein Programm bereit, wenn deine Figur die Wand berührt, weiteren Code auszuführen.
+                    Ergänze deshalb jetzt noch die folgenden Blöcke:
+                </p>
+                <ul>
+                    <li><code>spiele Klang (...) ganz</code> (Gruppe: Klang): wähle dir einen beliebigen Klang aus</li>
+                    <li><code>gehe zu x: (...) y: (...)</code> (Gruppe: Bewegung): stelle hier für x und y die Werte der
+                        Start-Position deiner Figur ein</li>
+                </ul>
+                <p>
+                    Wenn du fertig bist, sollte der Programmcode in deinem Programm-Code-Fenster so oder ähnlich
+                    aussehen:
+
+                    <img src="img/figur/figur-fehler-2.png" alt="Strafe bei Fehlern"
+                        class="d-block mt-3 img-fluid img-thumbnail" />
+                </p>
+                <h4 class="mt-4 border-top pt-3"><span class="badge bg-success">4.</span> Startposition</h4>
+                <p>
+                    Eine Kleinigkeit müssen wir nun noch ergänzen: Wir wollen, dass sich deine Figur zurück auf ihre
+                    Startposition begibt, immer wenn das Programm neugestartet wird. Um dies sicherzustellen benötigen
+                    wir noch etwas mehr Programmcode. Suche dir folgende Blöcke heraus und platziere diese im
+                    Programm-Code-Fenster:
+                </p>
+
+                <ul>
+                    <li><code>Wenn (grüne Fahne) angeklickt wird</code> (Gruppe: Ereignisse)</li>
+                    <li><code>gehe zu x: (...) y: (...)</code> (Gruppe: Bewegung): stelle hier für x und y die Werte der
+                        Start-Position deiner Figur ein</li>
+                </ul>
+
+                <p>
+                    Hast du alle Blöcke korrekt eingefügt, dann sieht dein Programmcode nun so aus:
+
+                    <img src="img/figur/figur-reset.png" alt="zurück zum Start"
+                        class="d-block mt-3 img-fluid img-thumbnail" />
+                </p>
+
+                <h4 class="mt-4 border-top pt-3"><span class="badge bg-success">5.</span> Ausprobieren</h4>
+                <p>
+                    Teste den neuen Code nun aus. Aktiviere den Vollbildmodus im
+                    Vorschaufenster <img class="browser-logo" src="img/editor/fullscreen.jpg" alt="Vollbildmodus" />.
+                    Stoppe zunächst dein Programm, falls dieses noch läuft über die Schaltfläche <img
+                        class="browser-logo" src="img/editor/stop.jpg" alt="Stopp" />. Starte das Programm
+                    anschließend neu.
+                </p>
+                <div class="border-top my-5 py-3">
+                    <a href="8-figur-bewegen.html" class="btn btn-lg btn-secondary float-start">Vorherige Seite</a>
+                    <a href="10-strafpunkte.html" class="btn btn-lg btn-secondary float-end">Nächste Seite</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

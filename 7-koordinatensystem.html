@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Scratch - Labyrinth Tutorial - Das Koordinatensystem</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+    <link rel="stylesheet" href="css/custom.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script type="text/javascript" src="js/include.js"></script>
+</head>
+
+<body>
+    <div data-include="header.html"></div>
+    <div class="d-flex flex-row justify-content-start">
+        <div data-include="menu.html"></div>
+        <div class="flex-column w-100">
+            <div class="px-3 py-2">
+                <h1>Das Koordinatensystem</h1>
+                <p class="alert alert-info">
+                    Bevor wir nun mit der Programmierung der Figur beginnen, möchte ich dir noch kurz das
+                    Koordinatensystem erklären, in welchem sich deine Figur bewegt. Lies dir den Text gut durch.
+                    Du benötigst das Wissen um nachher deine Figur bewegen zu können.
+                </p>
+                <p>
+                    Du siehst den Bereich auf dem sich deine Figur bewegen kann im Vorschaufenster. Er hat die Form
+                    eines Rechteckes
+                    und ist etwas breiter als hoch. Dieser Bereich ist in ganz viele kleine Felder unterteilt, die wir
+                    Punkte nennen.
+                    Wenn deine Figur (in meinem Fall Kiran) genau in der Mitte des Bereichs steht. Dann steht er am
+                    Punkt (0, 0).
+                </p>
+                <p>
+                    Wobei die erste Null seine Position im horizontalen Bereich beschreibt. Also im Bereich von links
+                    nach rechts. Wir nennen diese Position auch "X-Position". Du kannst den Wert der X-Position deiner
+                    Figur auch in der Figuren-Übersicht ablesen.
+
+                    Je weiter deine Figur nach rechts wandert, um so größer wird der Wert der X-Position. Der
+                    höchstmögliche Wert liegt bei <b>240</b>. Wenn deine Figur nach links wandert, dann verändert sich
+                    die X-Position in den negativen Bereich. Das erkennst du daran, dass vor dem Wert ein "-" (Minus)
+                    steht. Je weiter links die Figur positioniert ist, umso größer ist der Wert vor dem Minus. Ganz weit
+                    links beträgt der maximale Wert "<b>-240</b>".
+                </p>
+                <p>
+                    Die zweite Null beschreibt die vertikale Position der Figur. Also die Position im Bereich von oben
+                    nach unten. Wir nennen diese Position auch "Y-Position". Auch hier findest du den Wert der
+                    Y-Position deiner Figur in der Figuren-Übersicht.
+
+                    Je weiter deine Figur nach oben wandert, um so größer wird der Wert der Y-Position. Der
+                    höchstmögliche Wert ist die <b>180</b> - deine Figur befindet sich dann am oberen Rand. Bewegt sich
+                    deine Figur nach unten, so werden die Y-Werte wieder negativ. Das heißt ein "-" (Minus) wird davor
+                    geschrieben. Wenn deine Figur ganz weit am unteren Rand ist, dann beträgt der Y-Wert "<b>-180</b>".
+                </p>
+                <p>
+                    <img src="img/figur/koordinatensystem.jpg" alt="Koordinatensystem"
+                        class="d-block mt-3 img-fluid img-thumbnail" />
+                </p>
+                <div class="border-top my-5 py-3">
+                    <a href="6-figur-einfuegen.html" class="btn btn-lg btn-secondary float-start">Vorherige Seite</a>
+                    <a href="8-figur-bewegen.html" class="btn btn-lg btn-secondary float-end">Nächste Seite</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

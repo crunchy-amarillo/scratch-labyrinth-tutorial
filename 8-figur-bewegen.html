@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Scratch - Labyrinth Tutorial - Figuren bewegen</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+    <link rel="stylesheet" href="css/custom.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script type="text/javascript" src="js/include.js"></script>
+</head>
+
+<body>
+    <div data-include="header.html"></div>
+    <div class="d-flex flex-row justify-content-start">
+        <div data-include="menu.html"></div>
+        <div class="flex-column w-100">
+            <div class="px-3 py-2">
+                <h1>Figuren bewegen</h1>
+                <p class="lead">
+                    Jetzt ist es endlich soweit - wir starten mit dem Programmieren und erwecken deine Figur zum Leben.
+                </p>
+                <h4 class="mt-4 border-top pt-3"><span class="badge bg-success">1.</span> Aktive Figur beachten</h4>
+                <p>
+                    Du hast nun zwei Figuren in deiner Übersicht: Das Labyrinth und deine Figur. Jede Figur hat ihre
+                    eigenen Einstellungen und ihren eigenen Programmierbereich. Du musst also immer genau darauf achten,
+                    welches gerade die ausgewählte Figur ist. Wir bezeichnen die ausgewählte Figur auch als <b>aktive
+                        Figur</b>. Du erkennst die aktive Figur daran, dass diese in der Übersicht blau umrandet ist und
+                    das Mülleimer-Symbol angezeigt wird. Der Programmcode, den du schreibst, ist immer nur für die
+                    aktive
+                    Figur gültig. Du kannst also für verschiedenen Figuren jeweils unterschiedlichen Programmcode
+                    schreiben.
+
+                    <img src="img/figur/aktive-figur.jpg" alt="Aktive Figur"
+                        class="d-block mt-3 img-fluid img-thumbnail" />
+                </p>
+                <p class="alert alert-warning">Achte darauf, dass die <b>aktive Figur</b> jetzt deine eigene Figur ist.
+                    In meinem Fall ist das Kiran.</p>
+
+                <h4 class="mt-4 border-top pt-3"><span class="badge bg-success">2.</span> Tastatur-Block auswählen</h4>
+
+                <p>
+                    Wir wollen nun die Figur zunächst nach rechts laufen lassen, wenn die rechte Pfeiltaste auf der
+                    Tastatur gedrückt wird. Das geht, in dem wir den Wert der X-Position verändern und größer werden
+                    lassen. Wenn du noch nicht weißt, was die X-Position ist, dann lies dir bitte zunächst den Abschnitt
+                    zum <a href="7-koordinatensystem.html">Koordinatensystem</a> noch einmal genau durch.
+                </p>
+                <p>
+                    Wähle nun links in der Blockübersicht (4.) die Gruppe "Ereignisse". Suche nun in den Programmblöcken
+                    (5.)
+                    den Block <code>Wenn Taste (Leertaste) gedrückt wird</code>. Klicke diesen Block mit der Maus an,
+                    halte die linke Maustaste dabei gedrückt und ziehe nun den Block in das Programm-Code-Fenster (2.)
+                    an eine
+                    frei Stelle. Platziere den Block, in dem du die linke Maustaste wieder loslässt.
+
+                    <img src="img/figur/block-wenn-taste.jpg" alt="Wenn-Taste-Block"
+                        class="d-block mt-3 img-fluid img-thumbnail" />
+                </p>
+                <p>
+                    Klicke nun den Text <code>(Leertaste)</code> im Block an. Es öffnet sich einen Auswahlliste. Hier
+                    wählst
+                    du nun bitte <code>(Pfeil nach rechts)</code> aus. Dein Program-Code sollte nun so aussehen:
+
+                    <img src="img/figur/laufen-1.png" alt="Tastenblock auswählen"
+                        class="d-block mt-3 img-fluid img-thumbnail" />
+                </p>
+
+                <h4 class="mt-4 border-top pt-3"><span class="badge bg-success">3.</span> Nach rechts bewegen</h4>
+                <p>
+                    Nun wählst du in der Blockübersicht die Gruppe "Bewegung" und suchst den Programmblock <code>ändere x
+                        um</code>. Ziehe diesen nun auch in das Programm-Code-Fenster und verbinde ihn direkt mit dem
+                    schon vorhandenem Block <code>Wenn Taste `Pfeil nach rechts` gedrückt wird</code>.
+
+                    <img src="img/figur/laufen-2.png" alt="nach rechts laufen"
+                        class="d-block mt-3 img-fluid img-thumbnail" />
+                </p>
+                <p>
+                    Wichtig ist, dass die beiden Blöcke direkt verbunden sind. Du kannst testen, ob dein Code
+                    funktioniert in dem du noch einfach auf deiner Tastatur die rechte Pfeiltaste drückst.
+                    Im Vorschaufenster sollte sich deine Figur dann nach rechts bewegen. Die Zahl, welche im "<code>ändere
+                        x um</code>" Block hinterlegt ist, zeigt dir, wie schnell sich deine Figur bewegt. Voreinstellt
+                    ist
+                    ein Wert von 10. Das bedeutet, jedes mal, wenn du die rechte Pfeiltaste deiner Tastatur anklickst,
+                    dann bewegt sich deine Figur um 10 (Pixel) nach rechts. Steht die Figur am Anfang bei 0, dann steht
+                    sie nach einmal klicken bei 10, nach zweimal klicken bei 20 und so weiter. Du kannst auch
+                    beobachten, wie sich der X-Wert der Figur in der Figurenübersicht verändert.
+
+                    <img src="img/figur/nach-rechts.jpg" alt="nach rechts laufen"
+                        class="d-block mt-3 img-fluid img-thumbnail" />
+                </p>
+
+                <h4 class="mt-4 border-top pt-3"><span class="badge bg-success">4.</span> In alle Richtungen bewegen
+                </h4>
+                <p>
+                    Nun weißst du bereits, wie die Figur sich nach rechts bewegt. Du kannst nun schon selbstständig dein
+                    Programm erweitern und die Figur sich auch noch links und oben und unten bewegen lassen. Nutze dazu
+                    folgende Programm-Blöcke:
+                </p>
+                <ul>
+                    <li><code>Wenn Taste (Leertaste) gedrückt wird</code> (Gruppe: Ereignisse)</li>
+                    <li><code>ändere x um</code> (Gruppe: Bewegung)</li>
+                    <li><code>ändere y um</code> (Gruppe: Bewegung)</li>
+                </ul>
+                <p>
+                    Wenn du fertig bist, dann sollte der Programmcode deiner Figur in etwa so aussehen:
+
+                    <img src="img/figur/laufen-3.png" alt="alle Richtungen"
+                        class="d-block mt-3 img-fluid img-thumbnail" />
+                </p>
+                <h4 class="mt-4 border-top pt-3"><span class="badge bg-success">5.</span> Ausprobieren</h4>
+                <p>
+                    Deine Figur kann sich nun bewegen. Probier es einfach einmal aus. Aktiviere den Vollbildmodus im
+                    Vorschaufenster <img class="browser-logo" src="img/editor/fullscreen.jpg" alt="Vollbildmodus" /> und
+                    starte dein Programm.
+
+                    <video class="mt-4" controls>
+                        <source src="vid/Scratch-Labyrinth-1.mp4" type="video/mp4" />
+                        Nutze einen anderen Browser um dir das Video anzusehen.
+                    </video>
+                </p>
+
+                <div class="border-top my-5 py-3">
+                    <a href="7-koordinatensystem.html" class="btn btn-lg btn-secondary float-start">Vorherige Seite</a>
+                    <a href="8-figur-bewegen.html" class="btn btn-lg btn-secondary float-end">Nächste Seite</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
