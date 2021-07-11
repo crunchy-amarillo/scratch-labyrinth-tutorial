@@ -21,9 +21,90 @@
         <div data-include="menu.html"></div>
         <div class="flex-column w-100">
             <div class="px-3 py-2">
-                <h1>...</h1>
+                <h1>Strafpunkte verteilen</h1>
+                <p class="lead">
+                    In diesem Schritt erweitern wir dein Spiel um Strafpunkte. Diese werden hochgezählt, sobald deine
+                    Figur die Wand deines Labyrinths berührt.
+                </p>
+                <h4 class="mt-4 border-top pt-3"><span class="badge bg-success">1.</span> Variable erstellen</h4>
+                <p>
+                    Die Strafpunkt sind etwas, was sich dein Programm merken muss. Dafür benötigen wir einen
+                    Speicherplatz im Programm. Du kannst dir das in etwas so
+                    vorstellen, wie einen Speicherplatz in deinem Gehirn. Du hast da zum Beispiel eine Stelle im Gehirn,
+                    die sich merkt, wie alt du bist.
+                    Und jedes Jahr, wenn du ein Jahr älter bist, dann merkt sich dein Gehirn das. Und immer wenn dich
+                    jemand fragt, wie alt du bist, dann kannst du direkt eine Antwort geben.
+                    Einen solchen Speicherplatz in unserem Programm bezeichnen wir als Variable. Öffne deshalb jetzt die
+                    Programmblock-Gruppe "Variablen" und klicke dort auf die Schaltfläche <code>Neue Variable</code>.
+
+
+                    <img src="img/strafpunkte/variable-neu.jpg" alt="Variable anlegen"
+                        class="d-block mt-3 img-fluid img-thumbnail" />
+                </p>
+                <p>
+                    Es öffnet sich nun ein neues Fenster in dem du eine neue Variable anlegen kannst. Gib dieser
+                    Variable einen Namen, z.B. "Strafpunkte" oder wie in meinem Fall "Versuche". Wähle außerdem die
+                    Einstellung "Für alle Figuren" aus. Erstelle nun die neue Variable in dem du die "OK"-Schaltfläche
+                    anklickst.
+
+                    <img src="img/strafpunkte/variablen-erstellen.png" alt="Variable erstellen"
+                        class="d-block mt-3 img-fluid img-thumbnail" />
+                </p>
+                <h4 class="mt-4 border-top pt-3"><span class="badge bg-success">2.</span> Variable positionieren</h4>
+                <p>
+                    Deine neue Variable wird dir nun im Vorschaufenster angezeigt. Sie hat am Anfang einen Wert von 0.
+                    Das heißt, deine Figur hat bisher noch keine Strafpunkte erhalten. Du kannst die Variable im
+                    Vorschaufenster anklicken, wenn du dann die linke Maustaste gedrückt hälst, hast du die Möglichkeit
+                    die Variable an einen beliebigen anderen Ort zu verschieben. Positioniere die Variable so nach
+                    deinen Vorstellungen.
+
+                    <img src="img/strafpunkte/variable-in-vorschau.jpg" alt="Variable positionieren"
+                        class="d-block mt-3 img-fluid img-thumbnail" />
+                </p>
+                <h4 class="mt-4 border-top pt-3"><span class="badge bg-success">3.</span> Programmcode anpassen</h4>
+                <p>
+                    Nun müssen wir nur noch den Programmcode anpassen und dabei zwei Dinge tun:
+                </p>
+                <ul>
+                    <li>Zu Beginn des Programms den Wert der Strafpunkte immer wieder auf 0 sezten</li>
+                    <li>Immer wenn deine Figur die Wand berührt, die Strafpunkte hochzählen</li>
+                </ul>
+                <p>
+                    Nutze dafür die beiden Blöcke zum Setzen und Ändern einer Variable aus der Blockgruppe "Variablen":
+                    <br />
+                    <img src="img/strafpunkte/setze-variable.jpg" alt="Variable setzen"
+                        class="d-inline-block mt-3 img-fluid img-thumbnail" />
+
+                    <img src="img/strafpunkte/aendere-variable.jpg" alt="Variable ändern"
+                        class="d-inline-block mt-3 img-fluid img-thumbnail" />
+                </p>
+                <p>
+                    Der fertige Programmcode sollte dann so aussehen, wie in diesem Bild:
+
+                    <img src="img/strafpunkte/variable-einbauen.png" alt="Variable verwenden"
+                        class="d-block mt-3 img-fluid img-thumbnail" />
+                </p>
+                <p class="alert alert-danger">
+                    Achte darauf, dass deine Programmblöcke die richtige Variable verwenden. Ändere dafür die
+                    Einstellung "meine Variable" an den jeweiligen Blöcken auf den tatsächlichen Namen deiner Variable.
+                </p>
+
+                <h4 class="mt-4 border-top pt-3"><span class="badge bg-success">4.</span> Ausprobieren</h4>
+                <p>
+                    Jetzt ist es wieder an der Zeit deinen Programmcode zu testen. Aktiviere den Vollbildmodus im
+                    Vorschaufenster <img class="browser-logo" src="img/editor/fullscreen.jpg" alt="Vollbildmodus" />.
+                    Stoppe zunächst dein Programm, falls dieses noch läuft über die Schaltfläche <img
+                        class="browser-logo" src="img/editor/stop.jpg" alt="Stopp" />. Starte das Programm
+                    anschließend neu.
+
+                    <video class="mt-4 d-block" controls>
+                        <source src="vid/Scratch-Labyrinth-2.mp4" type="video/mp4" />
+                        Nutze einen anderen Browser um dir das Video anzusehen.
+                    </video>
+                </p>
+
                 <div class="border-top my-5 py-3">
-                    <a href="#" class="btn btn-lg btn-secondary float-start">Vorherige Seite</a>
+                    <a href="9-figur-und-wand.html" class="btn btn-lg btn-secondary float-start">Vorherige Seite</a>
                     <a href="#" class="btn btn-lg btn-secondary float-end">Nächste Seite</a>
                 </div>
             </div>
