@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Scratch - Labyrinth Tutorial - Scratch starten und einrichten</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+    <link rel="stylesheet" href="css/custom.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script type="text/javascript" src="js/include.js"></script>
+</head>
+
+<body>
+    <div data-include="header.html"></div>
+    <div class="d-flex flex-row justify-content-start">
+        <div data-include="menu.html"></div>
+        <div class="flex-column w-100">
+            <div class="px-3 py-2">
+                <h1>Gegenstände aufheben und Punkte sammeln</h1>
+                <p class="lead alert alert-info">
+                    In deinem Spiel funktioniert jetzt schon richtig viel. Und wenn du für heute genug vom Programmieren
+                    hast, dann ist das total in Ordnung. Du kannst hier gerne aufhören. Wenn du aber noch etwas Lust
+                    hast, weiterzumachen, dann zeige ich dir in den nächsten Schritten noch, wie du deine Spielfigur im
+                    Spiel Gegenstände aufheben und so Punkte sammeln lassen kannst.
+                </p>
+                <h4 class="mt-4 border-top pt-3"><span class="badge bg-success">1.</span> Punktfigur einfügen</h4>
+                <p>
+                    Als erstes benötigen wir einen Gegenstand, der eingesammelt werden kann. Wähle dafür über das
+                    Figuren-Menü wieder eine neue Figur aus. Ich habe mich für den kleinen Diamant namens "Crystal"
+                    entschieden. Du kannst auch jede andere Figur verwenden. Platziere die neue Figur wieder über
+                    das Vorschaufenster und passe wenn nötig ihre Größe an.
+
+                    <img src="img/punkte/punkt-figur.jpg" alt="Punktfigur auswählen"
+                        class="d-block mt-3 img-fluid img-thumbnail" />
+                </p>
+                <h4 class="mt-4 border-top pt-3"><span class="badge bg-success">2.</span> Programm für Punktfigur
+                    schreiben</h4>
+                <p>
+                    Nun müssen wir ein eigenes Programm für die Punktfigur schreiben. Diese muss schauen, ob sie von
+                    unserer Spielfigur berührt wird. Falls das passiert, dann lassen wir die Punktfigur verschwinden.
+                    Das sieht dann so aus, als ob diese von unserer Spielfigur eingesammelt wurde.
+                </p>
+                <ul>
+                    <li><code>Wenn (grüne Fahne) angeklickt wird</code> (Gruppe: Ereignisse)</li>
+                    <li><code>wiederhole fortlaufend</code> (Gruppe: Steuerung)</li>
+                    <li><code>falls &lt; &gt; dann</code> (Gruppe: Steuerung)</li>
+                    <li><code>wird (Mauszeiger) berührt</code> (Gruppe: Fühlen)</li>
+                    <li><code>spiele Klang (...) ab</code> (Gruppe: Klang)</li>
+                    <li><code>verstecke dich</code> (Gruppe: Aussehen)</li>
+                </ul>
+                <p>
+                    Ordne die Programmblöcke jetzt, wie im Bild dargestellt, an. Achte darauf, dass du im Block
+                    <code>wird (Mauszeiger) berührt</code> den Wert für (Mauszeiger) durch den Namen deiner Punktfigur
+                    ersetzt.
+
+                    <img src="img/punkte/programm-1.png" alt="Programm Schritt 1"
+                        class="d-block mt-3 img-fluid img-thumbnail" />
+                </p>
+                <h4 class="mt-4 border-top pt-3"><span class="badge bg-success">3.</span> Variable für Punktestand</h4>
+                <p>
+                    Da wir gleich noch mehr Punktfiguren einbauen werden, wollen wir mitzählen, wie viele Punktfiguren
+                    deine Spielfigur einsammelt. Dafür benötigen wir wieder einen Speicher in dem wir uns dem
+                    Punktestand merken. Weißt du noch, was wir dafür benötigen? Genau: Eine Variable. Wechsle nun wieder
+                    in die Blockgruppe "Variablen" und lege dort über die Schaltfläche "Neue Variable" einen neuen
+                    Speicherplatz an. Nenne die Variable Punkte oder Punktestand. Und platziere sie nach dem Anlegen
+                    über das Vorschaufenster wieder an einer Stelle deiner Wahl.
+
+                    <img src="img/punkte/neue-variable.png" alt="Variable einfügen"
+                        class="d-block mt-3 img-fluid img-thumbnail" />
+                </p>
+                <h4 class="mt-4 border-top pt-3"><span class="badge bg-success">4.</span> Variable im Programm ergänzen.
+                </h4>
+                <p>
+                    Jetzt müssen wir nur noch die neue Variable im Programm ergänzen. Ergänze dafür zunächst den Block
+                    <code>ändere [meine Variable] um (1)</code> im vorhandenen Programmcode. Achte darauf, dass du
+                    anstelle von [meine Variable] deine neu angelegte Variable für den Punktestand verwendest.
+
+                    <img src="img/punkte/programm-2.png" alt="Programm erweitern"
+                        class="d-block mt-3 img-fluid img-thumbnail" />
+                </p>
+                <p> Außerdem musst du noch dafür sorgen, dass zu Beginn des Spiels der Punktestand immer wieder auf Null
+                    zurückgesetzt wird. Auch deine Punktfigur muss sich beim Neustart wieder zeigen, wenn du sie zuvor
+                    eingesammelt hast und sie sich versteckt hat. Ergänze dafür folgende Programmblöcke und ordne diese
+                    wie im Bild an.
+                </p>
+                <ul>
+                    <li><code>Wenn (grüne Fahne) angeklickt wird</code> (Gruppe: Ereignisse)</li>
+                    <li><code>setze [meine Variable] auf (0)</code> (Gruppe: Variablen) - achte darauf, dass hier der
+                        Name deiner Punktvariable ausgewählt ist</li>
+                    <li><code>zeige dich</code></li>
+                </ul>
+                <p>
+                    <img src="img/punkte/programm-3.png" alt="Programm erweitern"
+                        class="d-block mt-3 img-fluid img-thumbnail" />
+                </p>
+
+                <h4 class="mt-4 border-top pt-3"><span class="badge bg-success">5.</span> Ausprobieren</h4>
+                <p>
+                    Test jetzt unbedingt noch einmal den aktuellen Stand deines Spieles aus bevor du mit den nächsten
+                    Schritten weitermachst. Kann deine Spielfigur nun die Punktfigur einsammeln, verschwindet diese
+                    dabei und dein Punktestand wird hochgezählt?
+                </p>
+
+                <h4 class="mt-4 border-top pt-3"><span class="badge bg-success">6.</span> Zweiten Gegenstand einbauen
+                </h4>
+                <p>
+                    Damit sich das Spiel für deine Figur auch richtig lohnt, bauen wir nun noch mehr Gegenstände zum
+                    einsammeln ein. Dies wird ganz einfach, denn wir werden dafür deine bereits vorhandene Punktfigur
+                    nur kopieren. Wähle dazu deine Punktfigur im Figuren-Menü aus und klicke anschließend mit der
+                    rechten Maustaste. Es öffnet sich ein Menü. Wähle aus diesem Menü nun den Punkt "Duplizieren" aus.
+                    Im Figuren-Menü erscheint nun eine zweite Punktfigur. Diese enthält schon den gleichen Programmcode,
+                    welchen du bei der ersten Figur eingebaut hast. Du musst deine neue, zweite Figur nun nur noch im
+                    Vorschaufenster an der gewünschten Stelle platzieren. Das war's schon!
+
+                    <img src="img/punkte/punkte-duplizieren.png" alt="Punkte duplizieren"
+                        class="d-block mt-3 img-fluid img-thumbnail" />
+                </p>
+
+                <h4 class="mt-4 border-top pt-3"><span class="badge bg-success">7.</span> Noch mehr Gegenstände einbauen
+                </h4>
+                <p>
+                    Wiederhole nun den Punkt 6 so oft du willst und baue so viele Gegenstände ein, wie du möchtest.
+
+                    <img src="img/punkte/viele-punkte.png" alt="Viele Punkte einfügen"
+                        class="d-block mt-3 img-fluid img-thumbnail" />
+                </p>
+
+                <h4 class="mt-4 border-top pt-3"><span class="badge bg-success">8.</span> Spielen!!!
+                </h4>
+                <p>
+                    Dein Spiel ist nun fertig. Teste es aus, <a href="2-speichern.html">speichere dir deinen Stand</a>
+                    und zeige es deinen Freunde oder später daheim deiner Familie. Sei stolz auf dich - du hast das
+                    wirklich toll hinbekommen!
+
+                    <video class="mt-4 d-block" controls>
+                        <source src="vid/Scratch-Labyrinth-4.mp4" type="video/mp4" />
+                        Nutze einen anderen Browser um dir das Video anzusehen.
+                    </video>
+                </p>
+                <div class="border-top my-5 py-3">
+                    <a href="11-ziel-einbauen.html" class="btn btn-lg btn-secondary float-start">Vorherige Seite</a>
+                    <a href="13-herausforderungen.html" class="btn btn-lg btn-secondary float-end">Nächste Seite</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

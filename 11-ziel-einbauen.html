@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Scratch - Labyrinth Tutorial - Ziel einbauen</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+    <link rel="stylesheet" href="css/custom.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script type="text/javascript" src="js/include.js"></script>
+</head>
+
+<body>
+    <div data-include="header.html"></div>
+    <div class="d-flex flex-row justify-content-start">
+        <div data-include="menu.html"></div>
+        <div class="flex-column w-100">
+            <div class="px-3 py-2">
+                <h1>Ein Ziel einbauen</h1>
+                <p class="lead">
+                    Jetzt wollen wir dem ganzen Spiel auch ein Ziel geben. Das ist ein Punkt im Labyrinth, welchen deine
+                    Figur erreichen muss. Wenn deine Figur am Ziel ankommt, beenden wir das Spiel.
+                </p>
+                <h4 class="mt-4 border-top pt-3"><span class="badge bg-success">1.</span> eine Figur als Ziel</h4>
+                <p>
+                    Um ein Ziel einzubauen, werden wir einen einfachen Trick anwenden. Wir nutzen noch eine weitere
+                    Figur, die das Ziel sein soll. Deshalb musst du als erstes noch einmal im Figuren-Menü einen neue
+                    Figur auswählen.
+
+                    <img src="img/ziel/figur-waehlen.jpg" alt="Figur auswählen"
+                        class="d-block mt-3 img-fluid img-thumbnail" />
+                </p>
+                <h4 class="mt-4 border-top pt-3"><span class="badge bg-success">2.</span> Zielfigur einfügen</h4>
+                <p>
+                    Suche dir einen beliebige Figur aus und füge diese durch Anklicken in dein Programm ein. Ich habe
+                    den Beachball gewählt - er sieht ein wenig wie eine Zielscheibe aus.
+
+                    <img src="img/ziel/zielfigur-auswaehlen.png" alt="Figur auswählen"
+                        class="d-block mt-3 img-fluid img-thumbnail" />
+                </p>
+                <p>
+                    Sobald du die Figur einfügt
+                    hast, ist diese automatisch ausgewählt. Das Programm-Code-Fenster ist nun wieder leer, da du keinen
+                    Code für diese Figur programmiert hast. Passe die Größe deiner Zielfigur an und schiebe sie im
+                    Vorschaufenster an die gewünschte Stelle. Wenn du möchtest, kannst du die neue Figur noch
+                    umbenennen.
+                    Ich habe meine Figur als "Ziel" bezeichnet - so finde ich sie an anderer Stelle beim Programmieren
+                    schnell wieder.
+
+                    <img src="img/ziel/ziel-figur-eingefuegt.png" alt="Figur eingefügt"
+                        class="d-block mt-3 img-fluid img-thumbnail" />
+                </p>
+                <h4 class="mt-4 border-top pt-3"><span class="badge bg-success">3.</span> Spielfigur anpassen</h4>
+                <p>
+                    Als erstes wollen wir nun wieder dafür sorgen, dass deine Spielfigur merkt, wenn sie die Zielfigur
+                    berührt. Du benötigst dafür wieder folgende Blöcke:
+                </p>
+                <ul>
+                    <li><code>Wenn (grüne Fahne) angeklickt wird</code> (Gruppe: Ereignisse)</li>
+                    <li><code>wiederhole fortlaufend</code> (Gruppe: Steuerung)</li>
+                    <li><code>falls &lt; &gt; dann</code> (Gruppe: Steuerung)</li>
+                    <li><code>wird (Mauszeiger) berührt</code> (Gruppe: Fühlen)</li>
+                </ul>
+                <p>
+                    Ordne die Programmblöcke wie im Bild gezeigt an. Stelle diesmal den
+                    <code>wird (Mauszeiger) berührt</code>-Block so ein, dass anstelle des (Mauszeiger) deine Zielfigur
+                    ausgewählt wird.
+
+                    <img src="img/ziel/kiran-anpassen.png" alt="Spielfigur anpassen"
+                        class="d-block mt-3 img-fluid img-thumbnail" />
+                </p>
+                <h4 class="mt-4 border-top pt-3"><span class="badge bg-success">4.</span> Spiel beenden</h4>
+                <p>
+                    Da nun dein Programmcode in der Lage ist, eine Berührung mit der Zielfigur zu ermitteln, müssen wir
+                    als letztes nur noch festlegen, was deine Figur in diesem Fall tun soll. Ich habe mich dafür
+                    entschieden, dass meine Figur einen kleinen Text sagt, wenn das Spiel beendet wird. Du kannst es
+                    gern genau so machen oder dir etwas anderes einfallen lassen. Du könntest zum Beispiel auch einen
+                    Klang abspielen. Ich habe für mein Spielende noch folgende Blöcke im Programmcode eingebaut:
+
+                </p>
+                <ul>
+                    <li><code>sage (Hallo!) für (2) Sekunden</code> (Gruppe: Aussehen) - um meine Spielfigur einen Text
+                        sagen zu lassen</li>
+                    <li><code>stoppe [alles]</code> (Gruppe: Steuerung) - um das Spiel zu beenden</li>
+                </ul>
+                <p>
+
+                    <img src="img/ziel/kiran-angepasst.png" alt="Spielfigur fertig angepasst"
+                        class="d-block mt-3 img-fluid img-thumbnail" />
+                </p>
+
+                <h4 class="mt-4 border-top pt-3"><span class="badge bg-success">5.</span> Ausprobieren</h4>
+                <p>
+                    Test jetzt dein Spiel wieder aus und schau, ob alles so funktioniert, wie du es dir vorstellst.
+                    Aktiviere den Vollbildmodus im Vorschaufenster <img class="browser-logo"
+                        src="img/editor/fullscreen.jpg" alt="Vollbildmodus" />.
+                    Stoppe zunächst dein Programm, falls dieses noch läuft über die Schaltfläche <img
+                        class="browser-logo" src="img/editor/stop.jpg" alt="Stopp" />. Starte das Programm
+                    anschließend neu.
+
+                    <video class="mt-4 d-block" controls>
+                        <source src="vid/Scratch-Labyrinth-3.mp4" type="video/mp4" />
+                        Nutze einen anderen Browser um dir das Video anzusehen.
+                    </video>
+                </p>
+
+                <div class="border-top my-5 py-3">
+                    <a href="10-strafpunkte.html" class="btn btn-lg btn-secondary float-start">Vorherige Seite</a>
+                    <a href="12-punkte-sammeln.html" class="btn btn-lg btn-secondary float-end">Nächste Seite</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
